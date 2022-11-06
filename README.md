@@ -8,6 +8,7 @@
 - Prettier
 - TypeScript
 - Husky
+- SASS
 
 ## Commands
 
