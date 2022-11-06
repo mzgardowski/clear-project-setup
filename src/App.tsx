@@ -18,6 +18,13 @@ const App: FC = () => {
         >
           Learn React
         </a>
+        <p>This project have:</p>
+        <ul>
+          <li>TypeScript</li>
+          <li>ESLint</li>
+          <li>Prettier</li>
+          <li>Husky</li>
+        </ul>
       </header>
     </div>
   );

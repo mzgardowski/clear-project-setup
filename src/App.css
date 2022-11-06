@@ -24,6 +24,12 @@
   color: white;
 }
 
+.App-header ul {
+  list-style: circle;
+  text-align: start;
+  margin: 0;
+}
+
 .App-link {
   color: #61dafb;
 }
