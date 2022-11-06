@@ -1,0 +1,49 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "standard-with-typescript",
+    "plugin:import/typescript",
+    "plugin:prettier/recommend"
+  ],
+  "overrides": [{ "files": "**/*.+(ts|tsx)" }],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "arrowFunctions": true
+    },
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "plugins": ["react", "@typescript-eslint", "prettier"],
+  "rules": {
+    "quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "@typescript-eslint/quotes": [
+      "error",
+      "double",
+      {
+        "avoidEscape": true
+      }
+    ],
+    "@typescript-eslint/triple-slash-reference": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "semi": "off",
+    "@typescript-eslint/semi": ["off"],
+    "react/jsx-uses-react": ["off"],
+    "react/react-in-jsx-scope": ["off"],
+    "no-shadow": "off"
+  },
+  "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+}

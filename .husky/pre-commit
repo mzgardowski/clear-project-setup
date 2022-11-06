@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Running tests
+yarn test || {
+  echo "Error in tests"
+}
+
+# Check Types - TypeScript
+yarn check-types || {
+  echo "Error in check types - TypeScript"
+}
+
+# Check Prettier
+yarn format && check-format || {
+  echo "Error - Prettier"
+}
+
+# Check ESLint
+yarn lint:fix && yarn lint || {
+  echo "Error - ESLint"
+}
+
+
+
