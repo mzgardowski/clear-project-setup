@@ -20,7 +20,8 @@ yarn check-types || {
 }
 
 # Check Prettier
-# yarn format && check-format || {
+yarn format 
+# && check-format || {
 #   echo "Error - Prettier"
 #   false;
 # }
