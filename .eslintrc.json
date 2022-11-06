@@ -9,9 +9,8 @@
     "react-app/jest",
     "standard-with-typescript",
     "plugin:import/typescript",
-    "plugin:prettier/recommend"
+    "plugin:prettier/recommended"
   ],
-  "overrides": [{ "files": "**/*.+(ts|tsx)" }],
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
@@ -25,14 +24,14 @@
   "rules": {
     "quotes": [
       "error",
-      "double",
+      "single",
       {
         "avoidEscape": true
       }
     ],
     "@typescript-eslint/quotes": [
       "error",
-      "double",
+      "single",
       {
         "avoidEscape": true
       }
@@ -45,5 +44,25 @@
     "react/react-in-jsx-scope": ["off"],
     "no-shadow": "off"
   },
-  "ignorePatterns": ["src/**/*.test.ts", "src/frontend/generated/*"]
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "no-undef": "off",
+        "import/no-unresolved": "off"
+      }
+    },
+    {
+      "files": ["src/Layout/AppComponents/**"],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    },
+    { "files": "**/*.+(ts|tsx)" }
+  ],
+  "ignorePatterns": [
+    "src/**/*.test.ts",
+    "src/frontend/generated/*",
+    "package.json"
+  ]
 }

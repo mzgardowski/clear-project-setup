@@ -1,6 +1,12 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# Prepare Husky
+yarn prepare || {
+  echo "Problem with Husky"
+  false;
+}
+
 # Running tests
 yarn test:nowatch || {
   echo "Error in tests"
@@ -14,10 +20,10 @@ yarn check-types || {
 }
 
 # Check Prettier
-yarn format && check-format || {
-  echo "Error - Prettier"
-  false;
-}
+# yarn format && check-format || {
+#   echo "Error - Prettier"
+#   false;
+# }
 
 # Check ESLint
 yarn lint:fix && yarn lint || {

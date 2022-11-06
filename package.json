@@ -9,11 +9,11 @@
     "test:nowatch": "react-scripts test --watchAll=false",
     "eject": "react-scripts eject",
     "check-types": "tsc --pretty --noEmit",
-    "format": "prettier --write '**/{*.js,*.jsx,*.ts,*.tsx}'",
-    "check-format": "prettier --check '**/{*.js,*.jsx,*.ts,*.tsx}'",
+    "format": "prettier --write .",
+    "check-format": "prettier --check .",
     "lint": "eslint '**/{*.js,*.jsx,*.ts,*.tsx}'",
     "lint:fix": "eslint --fix '**/{*.js,*.jsx,*.ts,*.tsx,package.json}'",
-    "prepare": "husky install"
+    "prepare": "husky install && chmod ug+x .husky/*"
   },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
