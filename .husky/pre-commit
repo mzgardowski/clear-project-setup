@@ -2,7 +2,7 @@
 . "$(dirname -- "$0")/_/husky.sh"
 
 # Running tests
-yarn test || {
+yarn test:nowatch || {
   echo "Error in tests"
 }
 
