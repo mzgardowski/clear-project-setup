@@ -25,6 +25,7 @@ const App: FC = () => {
           <li>Prettier</li>
           <li>Husky</li>
           <li>SASS</li>
+          <li>Testing - Jest</li>
         </ul>
       </header>
     </div>
